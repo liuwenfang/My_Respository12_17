@@ -1,0 +1,60 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="editLeft">
+        <item name="android:layout_width">20dp</item>
+        <item name="android:layout_height">20dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:background">@color/colorWhite</item>
+    </style>
+
+    <style name="edLoginInput">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:background">@null</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colorLightGray</item>
+        <item name="android:textColorHint">@color/colorLightGray</item>
+    </style>
+    <style name="tvSubmit">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:background">@drawable/selector_submit</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+    <style name="tvPersonal">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:textColor">@color/colorDarkBlack</item>
+    </style>
+    <style name="tvAuthLeft" parent="tvPersonal">
+        <item name="android:layout_marginLeft">5dp</item>
+    </style>
+    <style name="edAuthInput">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:textColor">@color/colorDarkBlack</item>
+        <item name="android:textColorHint">@color/colorGrayB2</item>
+    </style>
+    <style name="TabLayoutTextStyle1" parent="TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse">
+        <item name="textAllCaps">false</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+</resources>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/xloading_empty" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/XFrame_spacing"
+        android:text="@string/xloading_empty_text"
+        android:textColor="#8a8a8a"
+        android:textSize="@dimen/XFrame_text_size" />
+
+    <TextView
+        android:id="@id/xloading_retry"
+        style="@style/xloading_padding_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/xloading_btn_selector"
+        android:text="点击刷新"
+        android:textColor="#8a8a8a"
+        android:textSize="@dimen/XFrame_text_size" />
+</LinearLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="com.zzx.blog.activity.SubmitSuccessActivity">
+
+    <include layout="@layout/toolbar_layout" />
+
+    <ImageView
+        android:id="@+id/ivState"
+        android:layout_width="214dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="50dp"
+        android:background="@mipmap/img_submit" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="75dp"
+        android:paddingRight="75dp">
+
+        <TextView
+            android:id="@+id/tvPrompt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="提交成功，请等待管理员审核"
+            android:textColor="@color/colorDarkBlack"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tvMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/colorGrayB2"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tvFinish"
+            style="@style/tvSubmit"
+            android:layout_marginTop="40dp"
+            android:text="完成" />
+
+    </LinearLayout>
+
+</LinearLayout>

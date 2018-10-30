@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zzx.blog.activity.PersonalAuthActivity">
+
+    <include layout="@layout/toolbar_layout" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/colorGray"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:text="*完成实名认证，立即获取额度"
+        android:textColor="@color/colorGray88"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        android:paddingLeft="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@mipmap/img_realname" />
+
+            <TextView
+                style="@style/tvAuthLeft"
+                android:text="真实姓名" />
+
+            <EditText
+                android:id="@+id/edRealName"
+                style="@style/edAuthInput"
+                android:hint="请输入您的真实姓名" />
+        </LinearLayout>
+
+        <include layout="@layout/layout_gray_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@mipmap/img_id_num" />
+
+            <TextView
+                style="@style/tvAuthLeft"
+                android:text="身份证号" />
+
+            <EditText
+                android:id="@+id/edIDCard"
+                style="@style/edAuthInput"
+                android:digits="0123456789X"
+                android:hint="请输入您的身份证号" />
+        </LinearLayout>
+
+        <include layout="@layout/layout_gray_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@mipmap/img_bank_num" />
+
+            <TextView
+                style="@style/tvAuthLeft"
+                android:text="银行卡号" />
+
+            <EditText
+                android:id="@+id/edBankCard"
+                style="@style/edAuthInput"
+                android:hint="请输入您的银行卡号"
+                android:inputType="number" />
+        </LinearLayout>
+
+        <include layout="@layout/layout_gray_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:visibility="gone"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@mipmap/img_real_phone" />
+
+            <TextView
+                style="@style/tvAuthLeft"
+                android:text="手机号码" />
+
+            <EditText
+                android:id="@+id/edPhone"
+                style="@style/edAuthInput"
+                android:hint="请输入您的手机号码"
+                android:inputType="phone" />
+        </LinearLayout>
+
+        <!--<include layout="@layout/layout_gray_line" />-->
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvSubmit"
+        style="@style/tvSubmit"
+        android:layout_marginLeft="75dp"
+        android:layout_marginRight="75dp"
+        android:layout_marginTop="40dp"
+        android:text="提交审核" />
+
+</LinearLayout>

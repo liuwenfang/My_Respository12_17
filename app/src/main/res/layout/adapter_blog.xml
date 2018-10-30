@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    android:padding="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <view.RoundAngleImageView
+            android:id="@+id/rivHead"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@mipmap/img_logo"
+            app:roundHeight="5dp"
+            app:roundWidth="5dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="zzx"
+                android:textColor="@color/colorGreen"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvAddTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="2018-07-02 21:12:43"
+                android:textColor="@color/colorGray88"
+                android:textSize="11sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="现金急速贷怎么样"
+        android:textColor="@color/colorBlack"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+
+        <ImageView
+            android:layout_width="21dp"
+            android:layout_height="18dp"
+            android:background="@mipmap/img_comment" />
+
+        <TextView
+            android:id="@+id/tvCommentNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:text="2人回答"
+            android:textColor="@color/colorGray88"
+            android:textSize="13sp" />
+
+
+        <TextView
+            android:id="@+id/tvSendTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="2018-07-02 21:12:43"
+            android:textColor="@color/colorGray88"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlPhotoContent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/ivPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp" />
+
+    <RelativeLayout
+        android:id="@+id/rlPhotoDel"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_alignParentRight="true">
+
+        <view.RoundAngleImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_centerInParent="true"
+            android:alpha="0.5"
+            android:background="@color/colorLightBlack"
+            app:roundHeight="11dp"
+            app:roundWidth="11dp" />
+
+        <view.RoundAngleImageView
+            android:id="@+id/rivPhotoDel"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_centerInParent="true"
+            android:background="@mipmap/img_cha"
+            app:roundHeight="8dp"
+            app:roundWidth="8dp" />
+    </RelativeLayout>
+
+
+</RelativeLayout>
