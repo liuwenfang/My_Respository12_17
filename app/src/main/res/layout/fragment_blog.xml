@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
     <View
@@ -11,104 +12,51 @@
 
     <include layout="@layout/toolbar_layout" />
 
-    <LinearLayout
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tablayout_message"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        app:tabIndicatorColor="@color/colorGreen"
+        app:tabSelectedTextColor="@color/colorGreen"
         android:background="@color/colorWhite"
-        android:paddingBottom="10dp"
-        android:paddingTop="10dp">
+        android:layout_height="40dp"/>
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center">
 
-            <LinearLayout
-                android:id="@+id/llSendBlog"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:background="@mipmap/img_send_blog" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:text="我要发帖"
-                    android:textColor="@color/colorGrayText"
-                    android:textSize="15sp" />
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center">
-
-            <LinearLayout
-                android:id="@+id/llMyBlog"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:background="@mipmap/img_my_blog" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:text="我的帖子"
-                    android:textColor="@color/colorGrayText"
-                    android:textSize="15sp" />
-            </LinearLayout>
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager_message"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:gravity="center_vertical">
+        android:layout_height="match_parent"/>
 
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_marginLeft="10dp"
-            android:background="@mipmap/img_star" />
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:gravity="center_vertical">-->
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:text="热门帖子"
-            android:textColor="@color/colorBlack"
-            android:textSize="15sp" />
-    </LinearLayout>
+        <!--<ImageView-->
+            <!--android:layout_width="20dp"-->
+            <!--android:layout_height="20dp"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:background="@mipmap/img_star" />-->
 
-    <cn.bingoogolapple.refreshlayout.BGARefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/mRefreshLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="5dp"-->
+            <!--android:text="热门帖子"-->
+            <!--android:textColor="@color/colorBlack"-->
+            <!--android:textSize="15sp" />-->
+    <!--</LinearLayout>-->
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/mRecyclerView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-           />
-    </cn.bingoogolapple.refreshlayout.BGARefreshLayout>
+    <!--<cn.bingoogolapple.refreshlayout.BGARefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+        <!--android:id="@+id/mRefreshLayout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+
+        <!--<android.support.v7.widget.RecyclerView-->
+            <!--android:id="@+id/mRecyclerView"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+           <!--/>-->
+    <!--</cn.bingoogolapple.refreshlayout.BGARefreshLayout>-->
 
 
 </LinearLayout>

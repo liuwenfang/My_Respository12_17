@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">BLOG</string>
+    <string name="app_name">贷超</string>
     <string name="strRegister"><u>点击注册</u></string>
     <string name="strPwd"><u>忘记密码</u></string>
     <string name="viewpager_indicator">%1$d/%2$d</string>

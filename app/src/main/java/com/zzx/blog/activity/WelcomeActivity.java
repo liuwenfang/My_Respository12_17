@@ -1,6 +1,7 @@
 package com.zzx.blog.activity;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.os.Handler;
@@ -43,6 +44,7 @@ public class WelcomeActivity extends BaseActivity {
 //        checkPermission();
     }
 
+    @SuppressLint("HandlerLeak")
     Handler handlerLogin = new Handler() {
         @Override
         public void handleMessage(Message msg) {

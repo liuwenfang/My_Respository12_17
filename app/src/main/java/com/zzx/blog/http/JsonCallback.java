@@ -136,7 +136,7 @@ public abstract class JsonCallback<T> extends AbsCallback<T> {
             }
         } else {
             if (mContext != null)
-                ToastUtils.showTextToast(mContext, response.getException().getMessage());
+                ToastUtils.showTextToast(mContext, "请求失败请检查您的网络！");
         }
     }
 

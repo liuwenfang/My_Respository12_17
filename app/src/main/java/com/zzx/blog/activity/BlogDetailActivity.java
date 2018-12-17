@@ -1,5 +1,6 @@
 package com.zzx.blog.activity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.widget.NestedScrollView;
@@ -7,6 +8,7 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -85,7 +87,10 @@ public class BlogDetailActivity extends BaseActivity {
     public void initView() {
         setTitle("帖子详情");
         initRecycler();
-        requestNoteDetails();
+        if(!isVisBottom(mRecyclerViewComment)){
+            requestNoteDetails();
+        }
+
         mSwipeRefreshLayout.setColorScheme(android.R.color.holo_blue_bright,
                 android.R.color.holo_green_light,
                 android.R.color.holo_red_light,
@@ -147,6 +152,7 @@ public class BlogDetailActivity extends BaseActivity {
         mRecyclerViewComment.setAdapter(commentAdapter);
     }
 
+    @SuppressLint("SetTextI18n")
     private void initUI() {
         tvBlogTitle.setText(detailBean.getTitle() + "");
         tvName.setText(detailBean.getUserName() + "");
@@ -200,6 +206,7 @@ public class BlogDetailActivity extends BaseActivity {
         }
     }
 
+
     /**
      * 帖子详情
      */
@@ -208,6 +215,7 @@ public class BlogDetailActivity extends BaseActivity {
         map.put("ID", blogBean.getID());
         map.put("pageIndex", pageIndex);
         map.put("pageSize", 10);
+
         HttpUtils.requestPosts(mContext, AppConfig.requestNoteDetails, map, new JsonCallback<BlogDetailBean>(mContext, "加载中...") {
             @Override
             public void onSuccess(Response<BlogDetailBean> response) {
@@ -255,6 +263,22 @@ public class BlogDetailActivity extends BaseActivity {
                 }
             }
         });
+    }
+    public static boolean isVisBottom(RecyclerView recyclerView){
+        LinearLayoutManager layoutManager = (LinearLayoutManager) recyclerView.getLayoutManager();
+        //屏幕中最后一个可见子项的position
+        int lastVisibleItemPosition = layoutManager.findLastVisibleItemPosition();
+        //当前屏幕所看到的子项个数
+        int visibleItemCount = layoutManager.getChildCount();
+        //当前RecyclerView的所有子项个数
+        int totalItemCount = layoutManager.getItemCount();
+        //RecyclerView的滑动状态
+        int state = recyclerView.getScrollState();
+        if(visibleItemCount > 0 && lastVisibleItemPosition == totalItemCount - 1 && state == recyclerView.SCROLL_STATE_IDLE){
+            return true;
+        }else {
+            return false;
+        }
     }
 
 

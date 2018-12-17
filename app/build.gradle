@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 26
-    buildToolsVersion "26.0.1"
+    buildToolsVersion "26.0.2"
 
     defaultConfig {
         applicationId "com.zzx.blog"
@@ -61,17 +61,17 @@ android {
 //                minifyEnabled true     // 是否进行混淆
                 zipAlignEnabled true   // 优化
                 proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-                applicationVariants.all {
-                    variant -> generateAppName(variant)
-                }
+//                applicationVariants.all {
+//                    variant -> generateAppName(variant)
+//                }
             }
 
             debug {
                 signingConfig signingConfigs.release
                 proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-                applicationVariants.all {
-                    variant -> generateAppName(variant)
-                }
+//                applicationVariants.all {
+//                    variant -> generateAppName(variant)
+//                }
             }
         }
     }
@@ -80,17 +80,19 @@ android {
 def generateAppName(variant) {
     variant.outputs.each { output ->
         def file = output.outputFile
-        output.outputFile = new File(file.parent, "BLOG" + android.defaultConfig.versionName + ".apk")
+       // output.outputFile = new File(file.parent, "贷超" + android.defaultConfig.versionName + ".apk")
     }
+
 }
-
+2
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile project(path: ':zzxbaselibrary')
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(path: ':zzxbaselibrary')
 
-    compile 'com.android.support:appcompat-v7:26.1.0'
-    compile 'com.android.support:design:26.1.0'
-    compile 'com.android.support.constraint:constraint-layout:1.1.0'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support:design:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
@@ -98,18 +100,28 @@ dependencies {
     androidTestCompile 'com.android.support:support-annotations:26.1.0'
     androidTestCompile 'com.android.support.test:runner:1.0.1'
     androidTestCompile 'com.android.support.test.espresso:espresso-core:3.0.1'
-    compile 'com.jakewharton:butterknife:8.8.1'
+    implementation 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
-    compile 'cn.bingoogolapple:bga-refreshlayout:1.1.6'
-    compile 'com.lzy.net:okgo:3.0.2'
-    compile 'com.lzy.net:okrx2:2.0.2'
-    compile 'com.lzy.net:okserver:2.0.2'
-    compile 'com.google.code.gson:gson:2.7'
-    compile 'com.alibaba:fastjson:1.1.57.android'
-    compile 'org.greenrobot:eventbus:3.0.0'
-    compile 'com.jph.takephoto:takephoto_library:4.0.3'//图片
-    compile 'com.youth.banner:banner:1.4.9'
-    compile 'com.xiaosu:VerticalRollingTextView:1.2.0'
-    compile 'com.github.chrisbanes:PhotoView:1.2.6'
-    compile 'com.zxy.android:tiny:0.0.6'
+    implementation 'cn.bingoogolapple:bga-refreshlayout:1.1.6'
+    implementation 'com.lzy.net:okgo:3.0.2'
+    implementation 'com.lzy.net:okrx2:2.0.2'
+    implementation 'com.lzy.net:okserver:2.0.2'
+    implementation 'com.google.code.gson:gson:2.7'
+    implementation 'com.alibaba:fastjson:1.1.57.android'
+    implementation 'org.greenrobot:eventbus:3.0.0'
+    implementation 'com.jph.takephoto:takephoto_library:4.0.3'//图片
+    implementation 'com.youth.banner:banner:1.4.9'
+    implementation 'com.xiaosu:VerticalRollingTextView:1.2.0'
+    implementation 'com.github.chrisbanes:PhotoView:1.2.6'
+    implementation 'com.zxy.android:tiny:0.0.6'
+    implementation 'com.github.ithedan:BaseDialog:1.0'
+
+    implementation 'com.android.support:cardview-v7:26.0.0-alpha1'
+    implementation 'com.android.support:support-v4:26.+'
+    implementation 'com.android.support:design:26.0.0-alpha1'
+
+//
+//    compile 'com.android.support:appcompat-v7:26.+'
+//    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.zhy:base-rvadapter:3.0.3'
 }

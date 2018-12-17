@@ -51,6 +51,7 @@ public abstract class BaseActivity extends ZBaseActivity {
         super.onCreate(savedInstanceState);
         initBundle(getIntent().getExtras());
         initContentView(savedInstanceState);
+
         if (canSlide) {
             SlideLayout rootView = new SlideLayout(this);
             rootView.bindActivity(this);

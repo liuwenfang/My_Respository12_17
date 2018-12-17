@@ -1,5 +1,6 @@
 package com.zzx.blog.activity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -83,6 +84,7 @@ public class SubsidyDetailActivity extends BaseActivity {
         });
     }
 
+    @SuppressLint("SetTextI18n")
     private void initUI() {
         tvAppName.setText(detailBean.getAppname());
         tvLoanMoney.setText(detailBean.getLoan() + "元");
